@@ -1,0 +1,16 @@
+<div class="col-sm-6 col-sm-offset-3">
+  <legend>New Conference</legend>  
+  <%= form_for @conference do |f| %>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <%= f.text_field :title, class:"form-control" %>      
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <%= f.text_area :desc, class:'form-control' %>      
+    </div>
+    <div class="text-right">
+      <%= f.submit class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

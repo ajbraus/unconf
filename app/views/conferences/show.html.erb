@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <div class="container text-right">
+    <h2><%= @conference.title %></h2>
+    <div class="lead"><%= @conference.desc %></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="text-right">
+      <%= link_to "New Event", new_conference_event_path(@conference), class:"btn btn-danger" %>
+    </div>
+    <hr>
+    <div class="list-group">
+      <% @conference.events.each do |e| %>
+        <li class="list-group-item"><%= e.title %></li>
+      <% end %>
+    </div>    
+  </div>
+</div>

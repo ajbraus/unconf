@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <div class="containter text-center">
+    <h1>UnConf</h1>
+    <%= link_to "New Conference", new_conference_path %>
+  </div>
+</div>
+
+<div class="container">
+  <% @conferences.each do |c| %>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <%= link_to conference_path(c) do %>
+          <%= c.title %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
